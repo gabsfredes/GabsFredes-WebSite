@@ -27,12 +27,12 @@ const NavBar: React.FC = () => {
   }, []);
 
   let navLinks =
-    "text-zinc-600 hover:text-emerald-700 font-medium text-sm md:text-sm lg:text-xl lg:font-medium transition-colors duration-300 ease-in-out";
+    "text-nav hover:text-violet-700 font-medium text-sm md:text-sm lg:text-xl lg:font-medium transition-colors duration-300 ease-in-out";
   let navIcons =
-    "hover:text-zinc-300 font-medium text-2xl md:text-lg lg:text-2xl transition-colors duration-300 ease-in-out";
+    "text-nav hover:text-gray-950 font-medium text-2xl md:text-lg lg:text-2xl transition-colors duration-300 ease-in-out";
 
   return (
-    <nav className="w-full flex box-border justify-between items-center gap-1 py-6 px-10 md:gap-3 md:px-12 lg:gap-10">
+    <nav className="w-full flex box-border justify-between items-center gap-1 py-8 px-10 md:gap-3 md:px-12 lg:gap-10">
       <div className="flex-col text-center items-center">
         <p className="gradient font-bold text-2xl md:text-2xl lg:text-4xl tracking-wider">
           &#123;GF&#125;
@@ -44,7 +44,7 @@ const NavBar: React.FC = () => {
 
       <RiMenu3Fill 
         className={`${
-          toggleMenu ? "text-zinc-700" : "text-green-700"
+          toggleMenu ? "text-zinc-700" : "text-violet-700"
         } font-semibold text-4xl md:hidden`}
         onClick={toggleNav}
       />
@@ -54,7 +54,7 @@ const NavBar: React.FC = () => {
           toggleMenu
             ? "hidden"
             : "flex flex-col absolute right-10 top-20 rounded-md shadow-md p-4 items-center"
-        } gap-2 bg-slate-200 md:bg-white md:static md:top-0 md:shadow-none md:gap-6 md:flex-row lg:gap-10 lg:flex-row`}
+        } gap-2 z-50 bg-white md:static md:top-0 md:shadow-none md:gap-6 md:flex-row lg:gap-10 lg:flex-row`}
       >
         <a className={navLinks} href="/">
           Início
@@ -84,10 +84,10 @@ const NavBar: React.FC = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          className={`${navIcons} text-sky-700`}
+          className={`${navIcons}`}
           href="https://www.linkedin.com/in/gabrielfredes/"
         >
-          <FaLinkedin />
+          <FaLinkedin className={`${navIcons} text-sky-700`}/>
         </a>
       </div>
     </nav>
