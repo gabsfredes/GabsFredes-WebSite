@@ -8,7 +8,7 @@ interface BarLinksProps {
 
 const BarLinks: React.FC<BarLinksProps> = ({ isFooter }) => {
   let navLinks =
-    "text-nav hover:text-violet-700 font-medium text-sm md:text-sm lg:text-xl lg:font-medium transition-colors duration-300 ease-in-out";
+    "text-nav hover:text-violet-700 font-medium text-sm md:text-base lg:text-xl lg:font-medium transition-colors duration-300 ease-in-out";
   let navIcons =
     "text-nav hover:text-gray-950 font-medium text-2xl md:text-lg lg:text-2xl transition-colors duration-300 ease-in-out";
 
@@ -48,7 +48,7 @@ const BarLinks: React.FC<BarLinksProps> = ({ isFooter }) => {
           toggleMenu
             ? "hidden"
             : "flex flex-col absolute right-10 top-20 rounded-md shadow-md p-4 items-center"
-        } gap-2 z-50 bg-white md:static md:top-0 md:shadow-none md:gap-6 md:flex-row lg:gap-10 lg:flex-row`}
+        } gap-2 z-50 bg-white md:static md:top-0 md:shadow-none md:gap-4 md:flex-row lg:gap-7 lg:flex-row`}
       >
         <a className={navLinks} href="/">
           Início
