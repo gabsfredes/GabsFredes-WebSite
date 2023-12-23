@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
           gabsfredes
         </p>
       </div>
-      <BarLinks />
+      <BarLinks isFooter={false} />
     </nav>
   );
 };

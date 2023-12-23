@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiMenu3Fill } from "react-icons/ri";
 
-const BarLinks: React.FC = () => {
+interface BarLinksProps {
+  isFooter: boolean;
+}
+
+const BarLinks: React.FC<BarLinksProps> = ({ isFooter }) => {
   let navLinks =
     "text-nav hover:text-violet-700 font-medium text-sm md:text-sm lg:text-xl lg:font-medium transition-colors duration-300 ease-in-out";
   let navIcons =
@@ -62,23 +66,28 @@ const BarLinks: React.FC = () => {
           Contato
         </a>
 
-        <a
-          className={navIcons}
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/gabsfredes"
-        >
-          <FaGithub />
-        </a>
+        
+        {!isFooter && (
+          <>
+            <a
+              className={navIcons}
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/gabsfredes"
+            >
+              <FaGithub />
+            </a>
 
-        <a
-          target="_blank"
-          rel="noreferrer"
-          className={`${navIcons}`}
-          href="https://www.linkedin.com/in/gabrielfredes/"
-        >
-          <FaLinkedin className={`${navIcons} text-sky-700`} />
-        </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className={`${navIcons}`}
+              href="https://www.linkedin.com/in/gabrielfredes/"
+            >
+              <FaLinkedin className={`${navIcons} text-sky-700`} />
+            </a>
+          </>
+        )}
       </div>
     </>
   );
