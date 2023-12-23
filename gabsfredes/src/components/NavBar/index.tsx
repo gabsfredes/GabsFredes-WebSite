@@ -1,4 +1,4 @@
-import BarLinks from "./navLinksComponent";
+import BarLinks from "./BarLinks";
 
 const NavBar: React.FC = () => {
   return (
