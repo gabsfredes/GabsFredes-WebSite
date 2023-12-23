@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import BarLinks from "../../components/NavBar/BarLinks";
 
 const Footer: React.FC = () => {
   return (
@@ -49,6 +50,10 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="w-full flex justify-between items-center">
+        <div className="hidden lg:block"><BarLinks isFooter={true}/></div>
+        <p className="text-sm md:text-base lg:text-lg text-header">Design base <a href="https://github.com/pavanmg007" rel="noreferrer" className="gradient" target="_blank">PavanMG</a> | Modificações <a href="https://github.com/gabsfredes" rel="noreferrer" className="gradient" target="_blank">&#123;GF&#125;</a></p>
       </div>
     </footer>
   );
