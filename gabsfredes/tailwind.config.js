@@ -17,6 +17,9 @@ module.exports = {
         git: "#DE4C36",
         tail: "#44A8B3",
       },
+      backgroundImage: {
+        "header-pattern": "./src/assets/images/chevron.png",
+      },
     },
   },
   variants: {},

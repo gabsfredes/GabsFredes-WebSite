@@ -7,9 +7,9 @@ const Header: React.FC = () => {
   return (
     <header
       id="about"
-      className="flex flex-col gap-2 bg-white box-border justify-between items-center md:flex-row px-12 md:px-20 lg:px-24 lg:py-24"
-    >
-      <div className="text-center flex flex-col md:text-left">
+      className="flex flex-col gap-2 bg-[url('/src/assets/images/chevron.png')] inner-header py-4 box-border justify-between items-center md:flex-row px-12 md:px-20 lg:px-24 lg:py-24"
+    > 
+      <div className="text-center flex flex-col py-5 md:text-left">
         <p className={pStyles}>Olá 👋🏽,</p>
         <p className={pStyles}>Meu nome é</p>
         <p className="gradient font-bold text-lg md:text-2xl lg:text-6xl tracking-wider">
